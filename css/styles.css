@@ -10,6 +10,7 @@
     --secondary-button-bg-color: #2196F3;
     --primary-button-bg-color: #F5F4FA;
     --primary-bg-color: #2F303A;
+    --icons-color: #AFB1B8;
 }
 body{
     letter-spacing: 0.03em;
@@ -175,7 +176,8 @@ li {list-style-type: none;}
 .social-list-link:hover,
 .social-list-link:focus{
     background-color: var(--accent-color);
-    fill: var(--tertiary-text-color);
+    color: var(--tertiary-text-color);
+    fill: currentColor;
 }
 
 .social-list-link{
@@ -187,6 +189,7 @@ li {list-style-type: none;}
     height: 44px;
     border-radius: 50%;
     background-color: var(--tertiary-text-color);
+    fill: var(--icons-color);
 }
 .social-list-icon{
     width: 20px;
@@ -266,7 +269,6 @@ li {list-style-type: none;}
     justify-content: space-between;
     align-items: center;
 }
-.menu-contacts-header:hover{fill: var(--accent-color);}
 .contacts-list:not(:last-child){
     display: flex;
     align-content: center;
@@ -300,6 +302,7 @@ li {list-style-type: none;}
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+    fill: currentColor;
 }
 .logo-header{
     text-decoration: none;
@@ -335,34 +338,60 @@ li {list-style-type: none;}
 .regular-customers-list{
     display: flex;
     gap: 30px;
+    margin-top: 50px;
 }
+
 .client-logo{
-    margin-left: 32px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-right: 32px;
     width: 106px;
     height: 60px;
+    fill: var(--icons-color)
 }
-.client-border{
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
+.link-logoclient:hover .client-logo,
+.link-logoclient:focus .client-logo{
+    fill: var(--accent-color);
+    border: var(--accent-color);
+}
+.link-logoclient:focus,
+.link-logoclient:hover{
+    border: 1px solid var(--accent-color);
+}
+.link-logoclient{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 170px;
     height: 92px;
-    margin-top: 50px;
+    border: 1px solid var(--icons-color);
+    border-radius: 4px;
 }
 /*------------------------- REGULAR CUSTOMERS-------------------------------- */
 
 /*-------------------------FOOTER-------------------------*/
-
-.footer-social-links{
+.big-footer-box{
     align-items: baseline;
+    display: flex;
+}
+
+.footer-social-list-link:hover{
+    background-color: var(--accent-color);
+}
+.footer-social-list-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+.footer-social-links{
+    margin-left: 70px;
     column-gap: 10px;
 }
 .footer-social-list-icon{
-    fill: inherit;
     width: 20px;
     height: 20px;
+    fill: var(--tertiary-text-color);
 }
 .join{
     font-style: normal;
@@ -377,6 +406,7 @@ li {list-style-type: none;}
     display: flex;
     align-items: baseline;
     column-gap: 10px;
+    margin-top: 20px;
 }
 .footer-social-list{
     display: flex;
@@ -386,7 +416,6 @@ li {list-style-type: none;}
     display: flex;
     background-color: rgba(255, 255, 255, 01);
 }
-
 .footer {background-color: var(--primary-bg-color);
     padding-top: 60px;
     padding-bottom: 60px;
